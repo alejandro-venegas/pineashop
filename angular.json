@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "trajan": {
+    "pinashop": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/trajan",
+            "outputPath": "dist/pinashop",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "trajan:build"
+            "browserTarget": "pinashop:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "trajan:build:production"
+              "browserTarget": "pinashop:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "trajan:build"
+            "browserTarget": "pinashop:build"
           }
         },
         "test": {
@@ -114,15 +114,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "trajan:serve"
+            "devServerTarget": "pinashop:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "trajan:serve:production"
+              "devServerTarget": "pinashop:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "trajan"
+  "defaultProject": "pinashop"
 }
