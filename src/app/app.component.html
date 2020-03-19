@@ -1,11 +1,13 @@
 <header>
-  <h1 class="header-title">Pinneashop</h1>
+  <h1 class="header-title">Pineashop</h1>
   <nav class="main-nav">
     <ul>
-      <li><a routerLink="home">Home</a></li>
-      <li><a routerLink="products">Products</a></li>
+      <li><a routerLink="home" [routerLinkActive]="'selected'">Home</a></li>
+      <li>
+        <a routerLink="products" [routerLinkActive]="'selected'">Products</a>
+      </li>
       <li><input type="text" placeholder="Search" /></li>
-      <li><a routerLink="login">Log In</a></li>
+      <li><a routerLink="login" [routerLinkActive]="'selected'">Log In</a></li>
       <li>
         <a routerLink="shopping-list">
           <fa-icon [icon]="shoppingCart"></fa-icon>

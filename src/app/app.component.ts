@@ -7,6 +7,6 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons/faShoppingCart
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pinashop';
+  title = 'Pineashop';
   shoppingCart = faShoppingCart;
 }
