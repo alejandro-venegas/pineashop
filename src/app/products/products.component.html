@@ -1,5 +1,9 @@
 <div class="product-grid">
-  <article class="product-card" *ngFor="let product of products" routerLink="/">
+  <article
+    class="product-card"
+    *ngFor="let product of products"
+    [routerLink]="[product.id]"
+  >
     <img [src]="product.imageUrl" [alt]="product.name" />
     <div class="product-info">
       <h2>{{ product.name }}</h2>
