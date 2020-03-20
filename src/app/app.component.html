@@ -6,8 +6,10 @@
       <li>
         <a routerLink="products" [routerLinkActive]="'selected'">Products</a>
       </li>
-      <li><input type="text" placeholder="Search" /></li>
-      <li><a routerLink="login" [routerLinkActive]="'selected'">Log In</a></li>
+      <li><input type="text" id="search-box" placeholder="Search" /></li>
+      <li>
+        <a routerLink="login" [routerLinkActive]="'selected'">Log In</a>
+      </li>
       <li>
         <a routerLink="shopping-list">
           <fa-icon [icon]="shoppingCart"></fa-icon>
