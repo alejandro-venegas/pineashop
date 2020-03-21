@@ -1,1 +1,29 @@
-<p>product-details works!</p>
+<div id="product-detail-container">
+  <img [src]="product.imageUrl" />
+  <div class="product-info">
+    <h2>{{ product.name }}</h2>
+    <p>Category: {{ product.category }}</p>
+    <p class="price">${{ product.price }}</p>
+    <p>
+      {{ product.description }}
+    </p>
+  </div>
+  <div class="buttons">
+    <div class="quantity-group">
+      <label for="quantityInput">Quantity: </label>
+      <select name="quantityInput" id="quantityInput" #quantityInput>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+      </select>
+    </div>
+    <button (click)="addToCart(quantityInput)">Add to cart</button>
+  </div>
+</div>
