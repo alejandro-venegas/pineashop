@@ -1,13 +1,24 @@
-<div class="product-grid">
-  <article
-    class="product-card"
-    *ngFor="let product of products"
-    [routerLink]="[product.id]"
-  >
-    <img [src]="product.imageUrl" [alt]="product.name" />
-    <div class="product-info">
-      <h2>{{ product.name }}</h2>
-      <p>${{ product.price }}</p>
-    </div>
-  </article>
+<div class="products-container">
+  <div class="product-categories">
+    <h2>Categories</h2>
+    <ul *ngFor="let category of uniqueCategories">
+      {{
+        category
+      }}
+    </ul>
+  </div>
+
+  <div class="product-grid">
+    <article
+      class="product-card"
+      *ngFor="let product of products"
+      [routerLink]="[product.id]"
+    >
+      <img [src]="product.imageUrl" [alt]="product.name" />
+      <div class="product-info">
+        <h2>{{ product.name }}</h2>
+        <p>${{ product.price }}</p>
+      </div>
+    </article>
+  </div>
 </div>

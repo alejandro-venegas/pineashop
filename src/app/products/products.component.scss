@@ -1,37 +1,58 @@
 @import 'src/assets/styles/global';
-.product-grid {
-  display: grid;
-  width: 95%;
-  margin: 10rem auto;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, 20rem);
-  grid-gap: 1rem;
+.products-container {
+  width: 100vw;
 
-  .product-card {
-    background-color: $black;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.49);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    cursor: pointer;
-    transition: 0.5s all;
-    &:hover {
-      transform: translateY(-0.1rem);
-      box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.49);
-    }
-    h2 {
-      margin-bottom: 0;
-    }
-    p {
-      margin-top: 0;
-    }
-    .product-info {
-      padding: 0.5rem;
-      color: $white;
-    }
-    img {
-      width: 100%;
-      height: 20rem;
-      object-fit: cover;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-areas: 'c p';
+  .product-categories {
+    padding: 5rem 5rem 0 1rem;
+    position: sticky;
+
+    top: 0;
+    grid-area: c;
+    background-color: $white;
+    color: $black;
+    height: 100vh;
+
+    border-right: 1px solid $black;
+  }
+  .product-grid {
+    grid-area: p;
+    display: grid;
+    width: 100%;
+    margin: 10rem auto;
+    padding: 0 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 20rem);
+    grid-gap: 1rem;
+
+    .product-card {
+      background-color: $black;
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.49);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.5s all;
+      &:hover {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.49);
+      }
+      h2 {
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 0;
+      }
+      .product-info {
+        padding: 0.5rem;
+        color: $white;
+      }
+      img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+      }
     }
   }
 }

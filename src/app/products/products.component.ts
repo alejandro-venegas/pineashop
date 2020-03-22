@@ -9,9 +9,14 @@ import { Product } from '../../shared/product.model';
 })
 export class ProductsComponent implements OnInit {
   products: Product[];
+  uniqueCategories = [];
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
     this.products = this.productsService.productList;
+    this.uniqueCategories = this.products.map(product => product.category);
+    this.uniqueCategories = this.uniqueCategories.filter(
+      (product, index, array) => array.indexOf(product) === index
+    );
   }
 }

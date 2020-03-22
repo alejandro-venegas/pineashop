@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Roboto&display=swap');
+@import 'assets/styles/global.scss';
 body {
   min-height: 100vh;
-  background-image: url('src/assets/imgs/background.png');
+  background-image: url('src/assets/imgs/background.png'),
+    linear-gradient($white, $white);
+
   background-size: 6rem;
 }
 * {
