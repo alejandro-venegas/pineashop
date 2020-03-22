@@ -11,9 +11,12 @@
         <a routerLink="login" [routerLinkActive]="'selected'">Log In</a>
       </li>
       <li>
-        <a routerLink="shopping-list">
+        <a routerLink="shopping-list" [ngClass]="{ filled: shoppingCounter }">
           <fa-icon [icon]="shoppingCart"></fa-icon>
         </a>
+        <div *ngIf="shoppingCounter" class="counter-circle">
+          {{ shoppingCounter }}
+        </div>
       </li>
     </ul>
   </nav>
