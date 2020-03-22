@@ -30,6 +30,22 @@ export class ProductsService {
       "Just eat it before the blood moon... You don't wanna know...",
       50,
       'Edible'
+    ),
+    new Product(
+      'wqd4881d',
+      'Baby Pineapple Costume',
+      'https://ae01.alicdn.com/kf/HTB1UeGseAfb_uJkSmLyq6AxoXXar/Jane-Z-Ann-Baby-pineapple-costume-infant-toddler-photography-props-boys-girls-plushoutfits-3pcs-fruit-clothing.jpg',
+      'Now you can have the two things you love the most together!',
+      100,
+      'Costumes'
+    ),
+    new Product(
+      '1821dwq183',
+      'Pineapple Body Lotion',
+      'https://cdn.shopify.com/s/files/1/0034/5921/9520/products/Pineapple-and-Soymilk-lotion-Pricing-price-listing-image_800x.jpg?v=1553851274',
+      'Yeah, we know you love pineapple so much that you would rub pineapple all over your body. Well, worry no more, this Pineapple Body Lotion will make your pineapple desires socially accepted to the eyes of the unworthy infidels!',
+      30,
+      'Health'
     )
   ];
 
@@ -39,5 +55,15 @@ export class ProductsService {
     return this.productList.find(product => {
       return product.id === id;
     });
+  }
+  getCategories(productsArray: Product[]) {
+    let categories = productsArray.map(product => product.category);
+    categories = categories.filter(
+      (product, index, array) => array.indexOf(product) === index
+    );
+    return categories;
+  }
+  getProductsByCategory(category: string) {
+    return this.productList.filter(product => product.category === category);
   }
 }

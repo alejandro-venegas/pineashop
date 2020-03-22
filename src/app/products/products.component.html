@@ -2,9 +2,14 @@
   <div class="product-categories">
     <h2>Categories</h2>
     <ul *ngFor="let category of uniqueCategories">
-      {{
-        category
-      }}
+      <li>
+        <a
+          routerLink="./"
+          [queryParams]="{ category: category }"
+          [routerLinkActive]="'active'"
+          >{{ category }}</a
+        >
+      </li>
     </ul>
   </div>
 

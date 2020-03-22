@@ -16,6 +16,17 @@
     height: 100vh;
 
     border-right: 1px solid $black;
+    ul {
+      list-style: none;
+      li {
+        a {
+          color: $black;
+          &.active {
+            color: $primary-color;
+          }
+        }
+      }
+    }
   }
   .product-grid {
     grid-area: p;
@@ -36,7 +47,7 @@
       transition: 0.5s all;
       &:hover {
         transform: translateY(-0.1rem);
-        box-shadow: 0 0 0.9rem rgba(0, 0, 0, 0.49);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.49);
       }
       h2 {
         margin-bottom: 0;
