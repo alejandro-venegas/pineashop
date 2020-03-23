@@ -1,8 +1,16 @@
 <div class="products-container">
-  <div class="product-categories">
+  <article class="product-categories">
     <h2>Categories</h2>
-    <ul *ngFor="let category of uniqueCategories">
+    <ul>
       <li>
+        <a
+          routerLink="./"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >All</a
+        >
+      </li>
+      <li *ngFor="let category of uniqueCategories">
         <a
           routerLink="./"
           [queryParams]="{ category: category }"
@@ -11,7 +19,7 @@
         >
       </li>
     </ul>
-  </div>
+  </article>
 
   <div class="product-grid">
     <article

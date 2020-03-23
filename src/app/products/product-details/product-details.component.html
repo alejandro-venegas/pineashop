@@ -1,4 +1,4 @@
-<div id="product-detail-container">
+<article id="product-detail-container">
   <img [src]="product.imageUrl" />
   <div class="product-info">
     <h2>{{ product.name }}</h2>
@@ -9,6 +9,7 @@
     </p>
   </div>
   <div class="buttons">
+    <p (click)="onRemoveFromCart()" *ngIf="isAdded">Remove product from cart</p>
     <div class="quantity-group">
       <label for="quantityInput">Quantity: </label>
       <select name="quantityInput" id="quantityInput" #quantityInput>
@@ -26,4 +27,4 @@
     </div>
     <button (click)="addToCart(quantityInput.value)">Add to cart</button>
   </div>
-</div>
+</article>

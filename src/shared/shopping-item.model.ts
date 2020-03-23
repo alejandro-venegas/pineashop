@@ -1,17 +1,10 @@
+import { Product } from './product.model';
+
 export class ShoppingItem {
-  productId: string;
-  productName: string;
-  unitPrice: number;
+  product: Product;
   quantity: number;
-  constructor(
-    productId: string,
-    productName: string,
-    unitPrice: number,
-    quantity: number
-  ) {
-    this.productId = productId;
-    this.productName = productName;
-    this.unitPrice = unitPrice;
+  constructor(product: Product, quantity: number) {
+    this.product = product;
     this.quantity = quantity;
   }
 }

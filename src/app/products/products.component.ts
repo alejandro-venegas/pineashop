@@ -25,6 +25,9 @@ export class ProductsComponent implements OnInit {
           params.category
         );
       }
+      if (!params.category) {
+        this.products = this.productsService.productList;
+      }
     });
   }
 }

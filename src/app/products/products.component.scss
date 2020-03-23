@@ -12,15 +12,16 @@
     top: 0;
     grid-area: c;
     background-color: $white;
-    color: $black;
+
     height: 100vh;
 
     border-right: 1px solid $black;
     ul {
       list-style: none;
       li {
+        margin: 1rem 0;
         a {
-          color: $black;
+          color: $accent-color;
           &.active {
             color: $primary-color;
           }

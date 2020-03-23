@@ -1,1 +1,7 @@
-<p>shopping-list works!</p>
+<div class="shopping-list-container">
+    <article class="shopping-list-items">
+        <section class="shopping-item-card" *ngFor="let item of shoppingList">
+            <a [routerLink]="['/products' , item.productId]"><h2>{{item.productName}}</h2></a>
+        </section>
+    </article>
+</div>

@@ -35,7 +35,7 @@ export class ProductsService {
       'wqd4881d',
       'Baby Pineapple Costume',
       'https://ae01.alicdn.com/kf/HTB1UeGseAfb_uJkSmLyq6AxoXXar/Jane-Z-Ann-Baby-pineapple-costume-infant-toddler-photography-props-boys-girls-plushoutfits-3pcs-fruit-clothing.jpg',
-      'Now you can have the two things you love the most together!',
+      "Remember the time you put your baby in a stack of pineapples hoping they would become one? What? You did'nt? Well... We neither... Thing is, now you can have the most loved things in your life together!",
       100,
       'Costumes'
     ),

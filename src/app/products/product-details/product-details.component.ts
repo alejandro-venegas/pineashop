@@ -17,19 +17,22 @@ export class ProductDetailsComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
   product: Product;
+  isAdded: boolean;
 
   ngOnInit(): void {
     const id = this.route.snapshot.params.id;
     this.product = this.productsService.getProductById(id);
+    this.isAdded = this.shoppingService.findProductIndex(this.product) >= 0;
   }
 
   addToCart(quantity) {
-    const shoppingItem = new ShoppingItem(
-      this.product.id,
-      this.product.name,
-      this.product.price,
-      quantity
-    );
-    this.shoppingService.addShoppingItem(shoppingItem);
+    // tslint:disable-next-line:radix
+    this.shoppingService.addShoppingItem(this.product, parseInt(quantity));
+    this.isAdded = true;
+  }
+
+  onRemoveFromCart() {
+    this.shoppingService.removeProductFromCart(this.product);
+    this.isAdded = false;
   }
 }

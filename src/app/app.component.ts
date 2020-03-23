@@ -11,10 +11,11 @@ export class AppComponent implements OnInit {
   @ViewChild('shoppingCart', { static: true }) shoppingCartEl: ElementRef;
   title = 'Pineashop';
   shoppingCart = faShoppingCart;
-  shoppingCounter: number;
+  shoppingCounter: number = 0;
   constructor(private shoppingService: ShoppingService) {}
 
   ngOnInit(): void {
+    this.shoppingCounter = this.shoppingService.shoppingItems.length;
     this.shoppingService.itemsChanged.subscribe(counter => {
       this.shoppingCounter = counter;
     });
