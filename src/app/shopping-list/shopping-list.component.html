@@ -1,7 +1,13 @@
 <div class="shopping-list-container">
-    <article class="shopping-list-items">
-        <section class="shopping-item-card" *ngFor="let item of shoppingList">
-            <a [routerLink]="['/products' , item.productId]"><h2>{{item.productName}}</h2></a>
-        </section>
-    </article>
+  <article class="shopping-list-items">
+    <section class="shopping-item-card" *ngFor="let item of shoppingList">
+      <img src="{{ item.product.imageUrl }}" alt="{{ item.product.name }}" />
+      <div class="item-info">
+        <a [routerLink]="['/products', item.product.id]"
+          ><h2>{{ item.product.name }}</h2></a
+        >
+
+      </div>
+    </section>
+  </article>
 </div>
