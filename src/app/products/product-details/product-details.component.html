@@ -29,9 +29,9 @@
         #quantity="ngModel"
       />
     </div>
-    <span class="warning-span" *ngIf="quantity.invalid && quantity.touched"
+    <span class="warning-span" *ngIf="quantity.invalid && this.form.touched"
       >Please enter a number higher than 0</span
     >
-    <input type="submit" value="Add to Cart" [disabled]="form.invalid" />
+    <input type="submit" value="Add to Cart" />
   </form>
 </article>

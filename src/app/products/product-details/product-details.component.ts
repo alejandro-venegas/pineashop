@@ -2,7 +2,6 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../../shared/product.model';
 import { ProductsService } from '../products.service';
-import { ShoppingItem } from '../../../shared/shopping-item.model';
 import { ShoppingService } from '../../shopping-list/shopping.service';
 import { NgForm } from '@angular/forms';
 
@@ -28,10 +27,14 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart() {
-    // tslint:disable-next-line:radix
-    console.log(this.form);
-    // this.shoppingService.addShoppingItem(this.product, parseInt(quantity));
-    // this.isAdded = true;
+    this.form.control.markAllAsTouched();
+    if (this.form.valid) {
+      this.shoppingService.addShoppingItem(
+        this.product,
+        this.form.value.quantity
+      );
+      this.isAdded = true;
+    }
   }
 
   onRemoveFromCart() {
