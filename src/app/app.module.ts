@@ -11,6 +11,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { FormsModule } from '@angular/forms';
 import { MinValueDirective } from '../shared/min-value.directive';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MinValueDirective } from '../shared/min-value.directive';
     LoginComponent,
     ShoppingListComponent,
     ProductDetailsComponent,
-    MinValueDirective
+    MinValueDirective,
+    HeaderComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],

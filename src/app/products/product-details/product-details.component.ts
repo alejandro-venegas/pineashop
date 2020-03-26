@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../../shared/product.model';
 import { ProductsService } from '../products.service';
 import { ShoppingService } from '../../shopping-list/shopping.service';
@@ -17,7 +17,8 @@ export class ProductDetailsComponent implements OnInit {
   constructor(
     private productsService: ProductsService,
     private shoppingService: ShoppingService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +35,7 @@ export class ProductDetailsComponent implements OnInit {
         this.form.value.quantity
       );
       this.isAdded = true;
+      this.router.navigate(['../'], { relativeTo: this.route });
     }
   }
 

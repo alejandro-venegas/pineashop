@@ -1,25 +1,3 @@
-<header>
-  <h1 class="header-title">Pineashop</h1>
-  <nav class="main-nav">
-    <ul>
-      <li><a routerLink="home" [routerLinkActive]="'selected'">Home</a></li>
-      <li>
-        <a routerLink="products" [routerLinkActive]="'selected'">Products</a>
-      </li>
-      <li><input type="text" id="search-box" placeholder="Search" /></li>
-      <li>
-        <a routerLink="login" [routerLinkActive]="'selected'">Log In</a>
-      </li>
-      <li>
-        <a routerLink="shopping-list" [ngClass]="{ filled: shoppingCounter }">
-          <fa-icon [icon]="shoppingCart"></fa-icon>
-        </a>
-        <div *ngIf="shoppingCounter" class="counter-circle">
-          {{ shoppingCounter }}
-        </div>
-      </li>
-    </ul>
-  </nav>
-</header>
+<app-header></app-header>
 <router-outlet></router-outlet>
 <footer></footer>
