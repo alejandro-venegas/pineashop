@@ -19,3 +19,20 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+.input {
+  border: 1px solid $accent-color;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.input:focus {
+  box-shadow: 0 0 0.2rem $accent-color;
+  outline: none;
+}
+.input.ng-invalid.ng-touched {
+  border: 1px solid $secondary-color;
+}
+.warning-span {
+  margin-top: 0.5rem;
+  color: $secondary-color;
+  font-size: 0.8rem;
+}

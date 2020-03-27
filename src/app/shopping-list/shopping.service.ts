@@ -16,9 +16,9 @@ export class ShoppingService {
     private productsService: ProductsService,
     private noticeMessagesService: NoticeMessagesService
   ) {
-    // this.shoppingItems.push(
-    //     new ShoppingItem(productsService.productList[0], 5)
-    // );
+    this.shoppingItems.push(
+      new ShoppingItem(productsService.productList[0], 5)
+    );
   }
 
   addShoppingItem(product: Product, quantity: number) {
@@ -48,5 +48,13 @@ export class ShoppingService {
       'Product succesfully removed from shopping cart!'
     );
     this.itemsChanged.next(this.shoppingItems.length);
+  }
+
+  editItem(item: ShoppingItem, quantity: number) {
+    const shoppingItem = this.shoppingItems.find(value => value === item);
+    shoppingItem.quantity = quantity;
+    this.noticeMessagesService.sendInfoMessage(
+      `${shoppingItem.product.name} quantity successfully changed!`
+    );
   }
 }

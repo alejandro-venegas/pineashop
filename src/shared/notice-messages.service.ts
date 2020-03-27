@@ -13,9 +13,15 @@ export class NoticeMessagesService {
       message
     });
   }
-  sendWarningMessage(message: string) {
+  sendInfoMessage(message: string) {
     this.noticeMessages.next({
       id: 2,
+      message
+    });
+  }
+  sendWarningMessage(message: string) {
+    this.noticeMessages.next({
+      id: 3,
       message
     });
   }

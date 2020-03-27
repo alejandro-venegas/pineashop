@@ -54,6 +54,9 @@ export class HeaderComponent implements OnInit {
           backgroundColor = '#398f37';
           break;
         case 2:
+          backgroundColor = '#11698c';
+          break;
+        case 3:
           backgroundColor = '#afac31';
           break;
         default:

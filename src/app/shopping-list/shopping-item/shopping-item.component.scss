@@ -1,0 +1,40 @@
+@import 'src/assets/styles/global';
+.shopping-item-card {
+  display: flex;
+  background-color: $white;
+  align-items: center;
+
+  padding: 1rem;
+  img {
+    width: 10rem;
+  }
+  .item-info {
+    margin: 0 1rem;
+
+    a {
+      color: $accent-color;
+    }
+    form {
+      input.input {
+        width: 5rem;
+      }
+      input[type='submit'] {
+        margin: 0 1rem;
+        background-color: #398f37;
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10rem;
+        box-shadow: 0 0 0.5rem $shadow;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+  .item-price {
+    margin-left: auto;
+    font-weight: 600;
+    margin-right: 3rem;
+    color: $secondary-color;
+  }
+}

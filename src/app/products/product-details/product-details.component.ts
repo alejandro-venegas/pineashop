@@ -19,7 +19,9 @@ export class ProductDetailsComponent implements OnInit {
     private shoppingService: ShoppingService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+
+  }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params.id;

@@ -1,1 +1,24 @@
-<p>shopping-item works!</p>
+<section class="shopping-item-card">
+  <img src="{{ item.product.imageUrl }}" alt="{{ item.product.name }}" />
+  <div class="item-info">
+    <a [routerLink]="['/products', item.product.id]"
+      ><h2>{{ item.product.name }}</h2></a
+    >
+    <p>Category: {{ item.product.category }}</p>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+      <label for="quantity">Quantity: </label>
+      <input
+        type="number"
+        id="quantity"
+        name="quantity"
+        class="input"
+        [appMinValue]="1"
+        [(ngModel)]="quantity"
+        #quantityInput="ngModel"
+        required
+      />
+      <input type="submit" value="Modify" *ngIf="valueChange" />
+    </form>
+  </div>
+  <p class="item-price">${{ item.quantity * item.product.price }}</p>
+</section>
