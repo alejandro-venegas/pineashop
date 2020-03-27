@@ -47,7 +47,7 @@ export class HeaderComponent implements OnInit {
       this.renderer.setStyle(
         this.messageContainer.nativeElement,
         'animation',
-        'move-notice 3s'
+        'move-notice 5s'
       );
       switch (data.id) {
         case 1:

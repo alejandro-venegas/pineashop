@@ -12,6 +12,7 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 import { FormsModule } from '@angular/forms';
 import { MinValueDirective } from '../shared/min-value.directive';
 import { HeaderComponent } from './header/header.component';
+import { ShoppingItemComponent } from './shopping-list/shopping-item/shopping-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
     ShoppingListComponent,
     ProductDetailsComponent,
     MinValueDirective,
-    HeaderComponent
+    HeaderComponent,
+    ShoppingItemComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],
